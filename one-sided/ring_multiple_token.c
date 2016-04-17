@@ -39,6 +39,7 @@ int main(int argc, char **argv)
   }
 
   shmemx_am_quiet();		
+  shmem_barrier_all();
   printf("%d: Sent %d integer(s) to PE%d. Sum = %d\n", pe_id, MSG_CNT, peer, MSG_CNT*(MSG_CNT+1)/2*(pe_id+1));
   shmem_barrier_all();
   printf("%d: Received %d integer(s) from PE%d. Sum = %d\n", pe_id, count, peer, flag);
