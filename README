@@ -1,0 +1,11 @@
+
+
+This repo contains testsuites to evaluate the one-sided
+and two-sided active message extensions for OpenSHMEM.
+This suite can be downloaded from:
+github.com/sidjana/shmem_am_testsuite.git 
+
+
+Note: A prototype implementation of OpenSHMEM that supports
+these extensions is located at:
+github.com/openshmem-org/openshmem-am.git
