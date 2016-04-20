@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <shmem.h>
 #include <shmemx.h>
-#include "rtc.h"
+#include "../support/rtc.h"
 
 #define HANDLER_ID_REP 420
 #define HANDLER_ID_REQ 421
