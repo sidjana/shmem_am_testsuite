@@ -52,8 +52,10 @@ int main(int argc, char **argv)
   for(buff_size=1; buff_size<=MAX_MSG_SIZE; buff_size*=2) {
       get_rtc_(&start_time);
       for(j=1;j<=ITER_CNT;j++) {
-      	  shmemx_am_request(peer, HANDLER_ID_REQ, source_addr, buff_size);
-      	  shmemx_am_quiet();
+	  if(pe_id == 0) {
+      	    shmemx_am_request(peer, HANDLER_ID_REQ, source_addr, buff_size);
+	    shmemx_am_quiet();
+	  }
       }
       shmem_barrier_all();
       get_rtc_(&stop_time);
